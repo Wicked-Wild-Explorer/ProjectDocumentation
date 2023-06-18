@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Project Documentation</title>
+</head>
+<body>
+ <nav id="navbar">
+    <header>Project Documentation</header>
+    <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction and Overview</a></li>
+        <li><a class="nav-link" href="#Installation">Installation and Setup</a></li>
+        <li><a class="nav-link" href="#Configuration">Configuration and Customization</a></li>
+        <li><a class="nav-link" href="#Code">Code Examples and APIs</a></li>
+        <li><a class="nav-link" href="#Troubleshooting">Troubleshooting and FAQs</a></li>
+    </ul>
+ </nav>
+ <main id="main-doc">
+    <section class="main-section" id="Introduction">
+        <header>Introduction and Overview</header>
+        <p>This project is a web-based task management tool designed to help individuals and teams stay organized and efficiently manage their tasks and projects. The goal is to provide a user-friendly interface that allows users to create, prioritize, and track tasks, ensuring they can stay on top of their work and meet deadlines effectively.
+            The project utilizes HTML, CSS, and JavaScript for the front-end development, while the back-end is built using Node.js and Express.js. The database is implemented using MongoDB to store task data securely.
+            The problem this project aims to solve is the challenge of task management in a fast-paced work environment. Many individuals and teams struggle to keep track of their tasks and often rely on inefficient methods like sticky notes or scattered digital files. This project provides a centralized and intuitive solution to help users organize and prioritize their tasks, increasing productivity and reducing stress.</p> 
+       <ol>
+        <p><strong>Key features of the project include:</strong></p>
+        <li>User registration and authentication system</li>
+        <li>Task creation, editing, and deletion</li>
+        <li>Task filtering and sorting options</li>
+        <li>Prioritization and due date functionality</li>
+        <li>Task assignment and collaboration features for team projects</li>
+       </ol>
+    </section>
+    <section id="Installation" class="main-section">
+        <header>Installation and Setup</header>
+        <p>Step 1: Clone the project repository from GitHub.</p>
+        <pre>
+            <code>
+                git clone https://github.com/your-username/your-project.git
+     </code>
+        </pre>
+        <p>
+            Step 2: Navigate to the project directory.
+        </p>
+        <pre>
+            <code>
+                cd your-project
+     </code>
+        </pre>
+        <p>
+            Step 3: Install project dependencies using npm.  
+        </p>
+        <p>
+            Step 4: Set up the database.  
+        </p>
+        <p>
+            Step 5: Start the development server.
+        </p>
+    </section>
+    <section id="Configuration" class="main-section">
+       <header>Configuration and Customization</header>
+        <p>
+          The project offers several ways to configure and customize it according to specific requirements. Below are the instructions for modifying settings, integrating with other systems or APIs, and changing design elements:
+        </p>
+      
+        <h3>Modifying Settings</h3>
+        <p>
+          To modify project settings, follow these steps:
+        </p>
+        <ol>
+          <li>
+            <p>Step 1: Open the configuration file located at <code>config/settings.js</code></p>
+          </li>
+          <li>
+            <p>Step 2: Update the desired settings such as database connection details, email configuration, or application-specific settings.</p>
+          </li>
+          <li>
+            <p>Step 3: Save the changes.</p>
+          </li>
+        </ol>
+      
+        <h3>Integrating with Other Systems or APIs</h3>
+        <p>
+          To integrate the project with other systems or APIs, follow these steps:
+        </p>
+        <ol>
+          <li>
+            <p>Step 1: Locate the integration file(s) in the project directory.</p>
+          </li>
+          <li>
+            <p>Step 2: Open the integration file(s) in a code editor.</p>
+          </li>
+          <li>
+            <p>Step 3: Follow the provided documentation or comments within the file(s) to configure the integration and provide the necessary API keys or credentials.</p>
+          </li>
+          <li>
+            <p>Step 4: Save the changes.</p>
+          </li>
+        </ol>
+      
+        <h3>Changing Design Elements</h3>
+        <p>
+          To change the design elements of the project, such as colors, typography, or layout, follow these steps:
+        </p>
+        <ol>
+          <li>
+            <p>Step 1: Locate the CSS file(s) responsible for styling.</p>
+          </li>
+          <li>
+            <p>Step 2: Open the CSS file(s) in a code editor.</p>
+          </li>
+          <li>
+            <p>Step 3: Locate the relevant CSS selectors and properties for the design elements you wish to change.</p>
+          </li>
+          <li>
+            <p>Step 4: Modify the CSS properties to achieve the desired design changes.</p>
+          </li>
+          <li>
+            <p>Step 5: Save the changes.</p>
+          </li>
+        </ol>
+      </section>
+    <section id="Code" class="main-section">
+        <header>Code Examples and APIs</header>
+  <p>
+    This section provides code examples that demonstrate important functionalities or algorithms used in the project. Additionally, it documents any APIs, libraries, or frameworks utilized in the project. Refer to the following code snippets and usage instructions:
+  </p>
+
+  <h3>Example 1: Task Creation</h3>
+  <p>
+    The following code snippet demonstrates how to create a new task using the project's API:
+  </p>
+  <code>
+    // Make a POST request to the tasks endpoint to create a new task
+    POST /api/tasks
+    Content-Type: application/json
+
+    {
+      "title": "New Task",
+      "description": "This is a new task",
+      "dueDate": "2023-06-30"
+    }
+  </code>
+  <p>
+    Usage instructions:
+  </p>
+  <ul>
+    <li>Send a POST request to the `/api/tasks` endpoint with a JSON payload containing the task details.</li>
+    <li>Include the `"title"`, `"description"`, and `"dueDate"` fields in the payload to specify the task information.</li>
+    <li>Replace `"New Task"`, `"This is a new task"`, and `"2023-06-30"` with the desired task title, description, and due date respectively.</li>
+  </ul>
+
+  <h3>Example 2: Task Filtering</h3>
+  <p>
+    The following code snippet demonstrates how to filter tasks based on their status:
+  </p>
+  <code>
+    // Make a GET request to the tasks endpoint with the "status" query parameter
+    GET /api/tasks?status=completed
+  </code>
+  <p>
+    Usage instructions:
+  </p>
+  <ul>
+    <li>Send a GET request to the `/api/tasks` endpoint with the `"status"` query parameter.</li>
+    <li>Replace `"completed"` with the desired task status (e.g., `"completed"`, `"pending"`, `"in-progress"`).</li>
+    <li>The API will return the tasks that match the specified status.</li>
+  </ul>
+
+  <!-- Include additional code examples and usage instructions as needed -->
+</section>
+    <section id="Troubleshooting" class="main-section">
+        <header>Troubleshooting and FAQs</header>
+        <p>
+          In this section, you'll find solutions to common issues, troubleshooting tips, and answers to frequently asked questions (FAQs) related to the project. Check out the following information:
+        </p>
+      
+        <h3>Q: How do I resolve "Error: Invalid API Key"?</h3>
+        <p>
+          If you encounter the "Error: Invalid API Key" message, follow these steps to resolve it:
+        </p>
+        <ul>
+          <li>Double-check the API key you're using and make sure it's correct.</li>
+          <li>Verify that you have the necessary permissions to access the API.</li>
+          <li>If using a third-party API, ensure that you've properly registered for an API key and that it's active.</li>
+        </ul>
+      
+        <h3>Q: Why am I getting a "404 Not Found" error when accessing a specific endpoint?</h3>
+        <p>
+          If you're receiving a "404 Not Found" error when accessing a particular endpoint, consider the following troubleshooting steps:
+        </p>
+        <ul>
+          <li>Check if the endpoint URL is correct and matches the expected path.</li>
+          <li>Verify that the endpoint is implemented and available in the project's codebase.</li>
+          <li>Ensure that the necessary routes are properly configured in the server or routing system.</li>
+        </ul>
+      
+        <h3>Q: What are the known limitations of the project?</h3>
+        <p>
+          The project has a few known limitations that you should be aware of:
+        </p>
+        <ul>
+          <li>The search functionality currently supports only basic keyword matching.</li>
+          <li>File uploads are limited to a maximum size of 10MB.</li>
+          <li>Integration with a specific third-party service may have certain limitations outlined in the respective documentation.</li>
+        </ul>
+      
+        <!-- Include additional troubleshooting tips and FAQs as needed -->
+      </section>
+    <footer><p>Documentation brought to you by Layra Nunn </p></footer>
+ </main>
+</body>
+</html>
